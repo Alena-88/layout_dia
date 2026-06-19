@@ -1,9 +1,9 @@
 'use strict';
 
 const images = [
-  './src/images/photo-header.png',
-  './src/images/slider/header-slider-laptop.png',
-  './src/images/slider/header-slider-headphone.png',
+  './src/images/photo-header.jpg',
+  './src/images/slider/header-slider-laptop.jpg',
+  './src/images/slider/header-slider-headphone.jpg',
 ];
 
 let currentIndex = 0;
