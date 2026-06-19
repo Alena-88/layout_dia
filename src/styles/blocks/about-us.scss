@@ -1,9 +1,0 @@
-.about-us {
-  display: grid;
-  max-width: 270px;
-
-  @include on-tablet {
-    max-width: none;
-    margin: 0;
-  }
-}
