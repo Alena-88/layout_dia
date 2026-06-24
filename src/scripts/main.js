@@ -21,3 +21,19 @@ prevBtn.addEventListener('click', () => {
   currentIndex = (currentIndex - 1 + images.length) % images.length;
   image.src = images[currentIndex];
 });
+
+const burger = document.querySelector('.header__burger');
+const menu = document.querySelector('.header__menu');
+
+burger.addEventListener('click', () => {
+  menu.classList.toggle('header__menu--open');
+});
+
+const links = document.querySelectorAll('.header__link');
+
+links.forEach(link => {
+  link.addEventListener('click', () => {
+    menu.classList.remove('header__menu--open');
+  });
+});
+

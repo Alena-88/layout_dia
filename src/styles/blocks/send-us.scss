@@ -32,7 +32,6 @@
     height: 41px;
     border: none;
     border-bottom: 2px solid $header-text-color;
-    
 
     font-family: Poppins, sans-serif;
     font-size: 15px;
@@ -50,6 +49,15 @@
 
     &:focus {
       border-bottom-color: #144ed4;
+    }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:hover {
+      -webkit-box-shadow: 0 0 0 1000px $header-bg-color inset;
+      transition: background-color 5000s ease-in-out 0s;
+
+      -webkit-text-fill-color: $header-text-color;
     }
 
     &--message {

@@ -37,6 +37,7 @@
 
   &__nav {
     display: flex;
+    flex-wrap: wrap;
     gap: 32px;
     align-items: center;
 
@@ -53,8 +54,44 @@
   }
 
   &__menu {
-    display: none;
-    margin-left: 136px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    order: 1;
+
+    width: 100%;
+    max-height: 0;
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition:
+      max-height 0.3s ease,
+      opacity 0.3s ease,
+      visibility 0.3s ease,
+      padding 0.3s ease;
+
+    @include on-small-desktop {
+      overflow: visible;
+      flex-direction: row;
+      order: 0;
+
+      width: auto;
+      max-height: none;
+      margin-left: 136px;
+      padding: 0;
+
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &--open {
+      max-height: 500px;
+      padding: 24px 0;
+      visibility: visible;
+      opacity: 1;
+    }
   }
 
   &__link {
@@ -70,6 +107,10 @@
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 3px;
+
+    &:hover {
+      color: rgb(176, 173, 173);
+    }
   }
 
   &__burger {

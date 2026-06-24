@@ -48,13 +48,59 @@
     line-height: 150%;
 
     &--link {
+      position: relative;
       color: $header-text-color;
       text-decoration: none;
+
+      &::after {
+        content: '';
+
+        position: absolute;
+        bottom: -8px;
+        transform-origin: left;
+        transform: scale(0);
+
+        display: block;
+
+        width: 100%;
+        height: 1px;
+
+        background-color: $header-text-color;
+
+        transition: transform 0.3s;
+      }
+
+      &:hover::after {
+        transform: scale(1);
+      }
     }
   }
 
   &__link {
+    position: relative;
     text-decoration: none;
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      bottom: -8px;
+      transform-origin: left;
+      transform: scale(0);
+
+      display: block;
+
+      width: 100%;
+      height: 1px;
+
+      background-color: $header-text-color;
+
+      transition: transform 0.3s;
+    }
+
+    &:hover::after {
+      transform: scale(1);
+    }
   }
 
   &__icons {
